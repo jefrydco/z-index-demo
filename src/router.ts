@@ -7,7 +7,8 @@ const routes: RouteRecordRaw[] = [
   { path: '/z-index-visualize', component: () => import('./views/ZIndexVisualize.vue') },
   { path: '/keyframe-animation', component: () => import('./views/KeyframeAnimation.vue') },
   { path: '/transition', component: () => import('./views/Transition.vue') },
-  { path: '/z-index-keyframe', component: () => import('./views/ZIndexKeyFrameAnimation.vue') }
+  { path: '/z-index-keyframe', component: () => import('./views/ZIndexKeyFrameAnimation.vue') },
+  { path: '/state-machine', component: () => import('./views/StateMachine.vue') }
 ]
 
 const router = createRouter({
