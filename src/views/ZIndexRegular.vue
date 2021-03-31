@@ -45,13 +45,13 @@ export default defineComponent({
   @apply h-100 rounded-lg shadow-xl absolute;
 }
 .box--1 {
-  @apply w-250 bg-red-500 bg-opacity-90 top-20
+  @apply w-250 bg-red-500 bg-opacity-90 left-10 top-20
 }
 .box--2 {
-  @apply w-100 bg-green-500 bg-opacity-90 left-30 top-50
+  @apply w-100 bg-green-500 bg-opacity-90 left-50 top-50
 }
 .box--3 {
-  @apply w-100 bg-blue-500 bg-opacity-90 left-90 top-70
+  @apply w-100 bg-blue-500 bg-opacity-90 left-110 top-70
 }
 .z-0 {
   @apply z-0
