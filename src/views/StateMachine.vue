@@ -112,7 +112,7 @@ export default defineComponent({
       quizz: QuizzScreen,
       result: ResultScreen,
       taptap: TaptapScreen
-    })
+    }) as Record<string, string>
     const screenList = reactive([
       { text: 'Init', value: 'init', actionList: ['LOADING'] },
       { text: 'Loading', value: 'loading', actionList: ['LOADING', 'QUIZZ', 'RESULT', 'TAPTAP'] },

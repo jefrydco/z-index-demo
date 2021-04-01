@@ -40,17 +40,14 @@
         :src="object.image"
         :alt="object.text"
         :class="object.class"
-        :style="{
-          'animation-duration': `${20 / object.speed}s`,
-          'z-index': object.zIndex
-        }"
+        :style="computedStyle(object.speed, object.zIndex)"
       >
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, reactive } from 'vue'
+import { defineComponent, ref, computed, reactive, CSSProperties } from 'vue'
 import cloudNoon from '../assets/cloud-noon.svg'
 import cloudAfternoon from '../assets/cloud-afternoon.svg'
 import mosque from '../assets/mosque.svg'
@@ -59,9 +56,10 @@ import person from '../assets/man.svg'
 export default defineComponent({
   setup() {
     const speed = ref(1)
-    const animationSpeed = computed(() => ({
-      'animation-duration': `${20 / speed.value}s`
-    }))
+    const computedStyle = computed(() => (speed: number, zIndex: number) => ({
+      'animation-duration': `${20 / speed}s`,
+      'z-index': zIndex
+    } as CSSProperties))
     const objectList = reactive([
       {
         text: 'Cloud Blue',
@@ -100,8 +98,8 @@ export default defineComponent({
 
     return {
       speed,
-      animationSpeed,
       objectList,
+      computedStyle,
       isOverlayDisplayed
     }
   },

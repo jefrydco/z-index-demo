@@ -6,9 +6,9 @@
     <!-- <li>
       <router-link to="/z-index-visualize">/z-index-visualize</router-link>
     </li> -->
-    <!-- <li>
+    <li>
       <router-link to="/keyframe-animation">/keyframe-animation</router-link>
-    </li> -->
+    </li>
     <li>
       <router-link to="/transition">/transition</router-link>
     </li>

@@ -13,14 +13,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+import { defineComponent, ref, computed, CSSProperties } from 'vue'
 
 export default defineComponent({
   setup() {
     const speed = ref(1)
     const animationSpeed = computed(() => ({
       'animation-duration': `${20 / speed.value}s`
-    }))
+    })) as CSSProperties
 
     return {
       speed,
